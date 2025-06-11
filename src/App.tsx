@@ -67,23 +67,23 @@ function App() {
   const existingSymbols = stocks.map(stock => stock.symbol);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#1A1A1A]">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
+      <header className="bg-[#2C2C2C] border-b border-[#383838] sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <div className="bg-blue-600 p-2 rounded-lg">
-                <BarChart3 size={24} className="text-white" />
+              <div className="bg-gradient-to-br from-[#00FF00] to-[#39FF14] p-2 rounded-lg">
+                <BarChart3 size={24} className="text-[#1A1A1A]" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">StockWatch</h1>
-                <p className="text-sm text-gray-600">Personal Stock Watchlist</p>
+                <h1 className="text-xl font-bold text-[#F0F0F0]">StockWatch</h1>
+                <p className="text-sm text-[#AAAAAA]">Personal Stock Watchlist</p>
               </div>
             </div>
-            <div className="flex items-center gap-4 text-sm text-gray-600">
+            <div className="flex items-center gap-4 text-sm text-[#AAAAAA]">
               <div className="flex items-center gap-1">
-                <TrendingUp size={16} />
+                <TrendingUp size={16} className="text-[#00FF00]" />
                 <span>{stocks.length} stocks tracked</span>
               </div>
             </div>
@@ -109,9 +109,9 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 mt-16">
+      <footer className="bg-[#2C2C2C] border-t border-[#383838] mt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="text-center text-sm text-gray-500">
+          <div className="text-center text-sm text-[#AAAAAA]">
             <p>Stock prices are simulated for demonstration purposes. Not for actual trading decisions.</p>
           </div>
         </div>

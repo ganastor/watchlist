@@ -43,29 +43,29 @@ export const AddStockForm: React.FC<AddStockFormProps> = ({ onAddStock, existing
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+    <div className="bg-[#2C2C2C] rounded-xl shadow-lg border border-[#383838] overflow-hidden">
       {!isExpanded ? (
         <button
           onClick={() => setIsExpanded(true)}
-          className="w-full p-6 flex items-center justify-center gap-3 text-blue-600 hover:bg-blue-50 transition-colors group"
+          className="w-full p-6 flex items-center justify-center gap-3 text-[#00FF00] hover:bg-[#383838] transition-colors group"
         >
-          <div className="bg-blue-100 p-2 rounded-lg group-hover:bg-blue-200 transition-colors">
-            <Plus size={20} />
+          <div className="bg-[#00FF00]/20 p-2 rounded-lg group-hover:bg-[#00FF00]/30 transition-colors">
+            <Plus size={20} className="text-[#00FF00]" />
           </div>
           <span className="font-semibold">Add Stock to Watchlist</span>
         </button>
       ) : (
         <form onSubmit={handleSubmit} className="p-6">
           <div className="flex items-center gap-3 mb-6">
-            <div className="bg-blue-100 p-2 rounded-lg">
-              <Search size={20} className="text-blue-600" />
+            <div className="bg-[#00FF00]/20 p-2 rounded-lg">
+              <Search size={20} className="text-[#00FF00]" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900">Add New Stock</h3>
+            <h3 className="text-lg font-semibold text-[#F0F0F0]">Add New Stock</h3>
           </div>
           
           <div className="space-y-4">
             <div>
-              <label htmlFor="symbol" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="symbol" className="block text-sm font-medium text-[#F0F0F0] mb-2">
                 Stock Symbol
               </label>
               <input
@@ -74,14 +74,14 @@ export const AddStockForm: React.FC<AddStockFormProps> = ({ onAddStock, existing
                 value={formData.symbol}
                 onChange={(e) => setFormData({ ...formData, symbol: e.target.value })}
                 placeholder="e.g., AAPL, GOOGL, MSFT"
-                className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm font-mono uppercase"
+                className="w-full p-3 bg-[#383838] border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#00FF00] focus:border-[#00FF00] text-sm font-mono uppercase text-[#F0F0F0] placeholder-[#AAAAAA]"
                 maxLength={10}
                 required
               />
             </div>
             
             <div>
-              <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="company" className="block text-sm font-medium text-[#F0F0F0] mb-2">
                 Company Name
               </label>
               <input
@@ -90,7 +90,7 @@ export const AddStockForm: React.FC<AddStockFormProps> = ({ onAddStock, existing
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                 placeholder="e.g., Apple Inc., Alphabet Inc."
-                className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                className="w-full p-3 bg-[#383838] border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#00FF00] focus:border-[#00FF00] text-sm text-[#F0F0F0] placeholder-[#AAAAAA]"
                 required
               />
             </div>
@@ -99,14 +99,14 @@ export const AddStockForm: React.FC<AddStockFormProps> = ({ onAddStock, existing
           <div className="flex gap-3 mt-6">
             <button
               type="submit"
-              className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="flex-1 bg-gradient-to-r from-[#00FF00] to-[#39FF14] text-[#1A1A1A] py-3 px-4 rounded-lg font-semibold hover:from-[#39FF14] hover:to-[#00FF00] transition-all duration-200 focus:ring-2 focus:ring-[#00FF00] focus:ring-offset-2 focus:ring-offset-[#2C2C2C]"
             >
               Add Stock
             </button>
             <button
               type="button"
               onClick={handleReset}
-              className="px-6 py-3 border border-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+              className="px-6 py-3 border border-[#4A4A4A] text-[#AAAAAA] rounded-lg font-semibold hover:bg-[#383838] hover:text-[#F0F0F0] transition-colors"
             >
               Cancel
             </button>
